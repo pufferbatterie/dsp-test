@@ -33,8 +33,8 @@ func main() {
 	}
 
 	pxx, freqs := spectral.Simple(b, int(wav.SampleRate))
-	max, imax := max(pxx)
-	fmt.Println(max, imax)
+	_, imax := max(pxx)
+
 	fmt.Printf("max-2: val=%.2f \t f=%.2f\n", pxx[imax-2], freqs[imax-2])
 	fmt.Printf("max-1: val=%.2f \t f=%.2f\n", pxx[imax-1], freqs[imax-1])
 	fmt.Printf("max  : val=%.2f \t f=%.2f\n", pxx[imax], freqs[imax])
